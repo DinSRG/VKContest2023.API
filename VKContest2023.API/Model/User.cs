@@ -6,8 +6,8 @@ namespace VKContest2023.API.Model
     [Table("user")]
     public class User
     {
-        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         [Column("id")]
         public int Id { get; set; }
         

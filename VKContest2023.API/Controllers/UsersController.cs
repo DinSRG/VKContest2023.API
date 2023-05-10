@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
-using VKContest2023.API.DBData;
 using VKContest2023.API.Model;
 using VKContest2023.API.Services;
 
@@ -75,7 +74,7 @@ namespace VKContest2023.API.Controllers
 
             var newUser = new User
             {
-                Id = ++maxUserId,
+                Id = ++maxUserId, 
                 Login = userToAdd.Login,
                 Password = userToAdd.Password,
                 CreatedDate = DateOnly.FromDateTime(DateTime.Now),

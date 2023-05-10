@@ -46,6 +46,7 @@ namespace VKContest2023.API.Services
                 .Include(u => u.UserState)
                 .Include(u => u.UserGroup)
                 .Where(u => u.UserState.Code != "Blocked")
+                .OrderBy(x => x.Id)
                 .Skip(pageSize * (pageNumber - 1))
                 .Take(pageSize)
                 .ToListAsync();
@@ -60,7 +61,7 @@ namespace VKContest2023.API.Services
 
         public void DeleteUser(int userId, User user)
         {
-            user.UserStateId = 0;
+            user.UserStateId = 2;
         }
 
         public async Task<bool> SaveChangesAsync()

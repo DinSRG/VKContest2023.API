@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using VKContest2023.API.DBData;
 using VKContest2023.API.Services;
 

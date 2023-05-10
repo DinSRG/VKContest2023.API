@@ -13,6 +13,6 @@ namespace VKContest2023.API.Model
         [MinLength(5)]
         public string? Password { get; set; }
         [Required]
-        public int UserGroupId { get; set; }
+        public int UserGroupId { get; set; } = 2;
     }
 }
